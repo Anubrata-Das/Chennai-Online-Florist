@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      .image-container {
+      position: relative;
+      overflow: hidden;
+      width: 300px; /* Adjust the width as needed */
+      height: 200px; /* Adjust the height as needed */
+    }
+
+    .overlay {
+      position: absolute;
+      width: 0;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      transition: width 0.3s ease-in-out;
+    }
+
+    .image-container:hover .overlay {
+      width: 50%; /* Adjust the width as needed */
+    }
+
+    .overlay.from-top-left {
+      top: 0;
+      left: 0;
+    }
+
+    .overlay.from-bottom-right {
+      bottom: 0;
+      right: 0;
+    }
+      </style>
+</head>
+<body>
+    <div class="image-container">
+        <img src="bk.jpg" alt="Your Image">
+        <div class="overlay from-top-left"></div>
+        <div class="overlay from-bottom-right"></div>
+      </div>
+</body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .circle-container {
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+        /* Adjust the maximum width as needed */
+            margin: 0 auto;
+            width: 100%;
+            margin-bottom: 30px;
+        }
+        .circle-container p{
+            text-align: center;
+            font-size: 25px;
+            font-family: "futura md bt font";
+        }
+        .lll{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .box-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            
+            /* border-radius: 50%; */
+            /* margin: 3px; */
+        }
+        .occ-image{
+            width: 250px;
+            height: 250px;
+            margin: 10px;
+            border-radius: 10%; 
+            overflow: hidden;
+            cursor: pointer;
+            position: relative;
+            box-shadow: 5px 6px 11px 2px rgba(0, 0, 0, 0.2)
+        }
+        
+        .overlay-occ {
+            position: absolute;
+            width: 0;
+            height: 100%;
+            background-color: rgb(3, 112, 3);
+            opacity: 0.6;
+            transition: width 0.3s ease-in-out;
+            }
+        .occ-image:hover .overlay-occ {
+            width: 50%; /* Adjust the width as needed */
+            
+        }
+
+        .overlay-occ.from-top-left {
+        top: 0;
+        left: 0;
+        }
+
+        .overlay-occ.from-bottom-right {
+        bottom: 0;
+        right: 0;
+        }
+        .lll p {
+           
+            transition:  0.3s ease-out;
+        }
+        .lll:hover p{
+            opacity: 1;
+            transform: scale(1.1);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="circle-container">
+
+        <div class="lll">
+            <div class="occ-image">
+                <img src="flowers delivery in chennai/black cardboard gift box 1.jpg" alt="Image 1" class="box-image">
+                <div class="overlay-occ from-top-left"></div>
+                <div class="overlay-occ from-bottom-right"></div>
+            </div>
+            <p>BIRTHDAY</p>
+        </div>
+
+        <div class="lll">
+            <div class="occ-image">
+                <img src="flowers delivery in chennai/image 105 (1) 1.jpg" alt="Image 1" class="box-image">
+                <div class="overlay-occ from-top-left"></div>
+                <div class="overlay-occ from-bottom-right"></div>
+            </div>
+            <p>WEDDING</p>
+        </div>
+
+        <div class="lll">
+            <div class="occ-image">
+                <img src="flowers delivery in chennai/image 106.jpg" alt="Image 2" class="box-image">
+                <div class="overlay-occ from-top-left"></div>
+                <div class="overlay-occ from-bottom-right"></div>
+            </div>
+            <p>ANNIVERSARY</p>
+        </div>
+        <div class="lll">
+            <div class="occ-image">
+                <img src="flowers delivery in chennai/image 106.jpg" alt="Image 2" class="box-image">
+                <div class="overlay-occ from-top-left"></div>
+                <div class="overlay-occ from-bottom-right"></div>
+            </div>
+            <p>GET WELL SOON</p>
+        </div>
+
+        <div class="lll">
+            <div class="occ-image">
+                <img src="flowers delivery in chennai/image 107.jpg" alt="Image 3" class="box-image">
+                <div class="overlay-occ from-top-left"></div>
+                <div class="overlay-occ from-bottom-right"></div>
+            </div>
+            <p>CONGRATULATION</p>
+        </div>
+        <div class="lll">
+            <div class="occ-image">
+                <img src="flowers delivery in chennai/image 14.jpg" alt="Image 4" class="box-image">
+                <div class="overlay-occ from-top-left"></div>
+                <div class="overlay-occ from-bottom-right"></div>
+            </div>
+            <p>CELEBRATIONS DAY</h>
+        </div>
+        <div class="lll">
+            <div class="occ-image">
+                <img src="flowers delivery in chennai/image 15.jpg" alt="Image 5" class="box-image">
+                <div class="overlay-occ from-top-left"></div>
+                <div class="overlay-occ from-bottom-right"></div>
+            </div>
+            <p>FESTIVALS</p>
+        </div>
+        <div class="lll">
+            <div class="occ-image">
+                <img src="flowers delivery in chennai/white flower 1.jpg" alt="Image 5" class="box-image">
+                <div class="overlay-occ from-top-left"></div>
+                <div class="overlay-occ from-bottom-right"></div>
+            </div>
+            <p>CONDOLENCE</p>
+        </div>
+    </div>
+</body>
+</html>

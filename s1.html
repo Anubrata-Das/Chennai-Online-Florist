@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Changing Text with Fade Animation</title>
+    <style>
+      body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.search-bar {
+  position: relative;
+}
+
+#searchInput {
+  width: 200px;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.animate-text {
+  animation: fadeInOut 2s ease-in-out infinite;
+}
+
+@keyframes fadeInOut {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+    </style>
+</head>
+<body>
+
+    <div class="search-bar">
+    <input type="text" id="searchInput" placeholder="Search...">
+  </div>
+
+<script>
+     document.addEventListener("DOMContentLoaded", function () {
+  const searchInput = document.getElementById("searchInput");
+  const phrases = [
+    "Type something",
+    "Search for information",
+    "Explore the web",
+    "Learn new things",
+    "Discover trends",
+  ];
+
+  let currentPhraseIndex = 0;
+  let currentCharIndex = 0;
+  let userInputFlag = false;
+
+  function typeText() {
+    if (userInputFlag) {
+      stopAnimation();
+      return;
+    }
+
+    searchInput.value = phrases[currentPhraseIndex].substring(0, currentCharIndex);
+    currentCharIndex++;
+
+    if (currentCharIndex > phrases[currentPhraseIndex].length) {
+      setTimeout(eraseText, 1000); // Wait for 1 second before erasing
+    } else {
+      setTimeout(typeText, 100); // Type the next character after a short delay
+    }
+  }
+
+  function eraseText() {
+    if (userInputFlag) {
+      stopAnimation();
+      return;
+    }
+
+    if (currentCharIndex >= 0) {
+      searchInput.value = phrases[currentPhraseIndex].substring(0, currentCharIndex);
+      currentCharIndex--;
+      setTimeout(eraseText, 50); // Erase the previous character after a short delay
+    } else {
+      currentPhraseIndex = (currentPhraseIndex + 1) % phrases.length;
+      setTimeout(typeText, 500); // Wait for 0.5 seconds before typing the next phrase
+    }
+  }
+
+  function stopAnimation() {
+    // Add any additional cleanup logic if needed
+    console.log("Animation stopped");
+  }
+
+  // Add event listener to the input field to detect user input
+  searchInput.addEventListener("input", function () {
+    userInputFlag = true;
+    stopAnimation();
+  });
+
+  // Start the typing animation
+  typeText();
+});
+
+</script>
+
+</body>
+</html>

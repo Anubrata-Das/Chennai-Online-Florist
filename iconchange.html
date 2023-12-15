@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <style>
+    .icon-container {
+    position: relative;
+    }
+
+    .icon {
+    display: inline-block;
+    padding: 10px;
+    background-color: #3498db;
+    color: #fff;
+    cursor: pointer;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+    }
+
+    .icon:hover {
+    opacity: 0;
+    }
+
+
+  </style>
+</head>
+<body>
+    <div class="icon-container">
+        <div class="icon" id="icon1">Icon 1</div>
+        <div class="icon" id="icon2">Icon 2</div>
+    </div>  
+      
+
+</body>
+<script>
+ document.getElementById('icon1').addEventListener('mouseover', function() {
+  // Fade out icon1
+  this.style.opacity = 0;
+  
+  // Fade in icon2 after a delay (adjust as needed)
+  setTimeout(function() {
+    document.getElementById('icon2').style.opacity = 1;
+  }, 500); // 500 milliseconds delay
+});
+
+document.getElementById('icon2').addEventListener('mouseout', function() {
+  // Fade out icon2
+  this.style.opacity = 0;
+  
+  // Fade in icon1 after a delay (adjust as needed)
+  setTimeout(function() {
+    document.getElementById('icon1').style.opacity = 1;
+  }, 500); // 500 milliseconds delay
+});
+
+  </script>
+
+</html>

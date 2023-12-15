@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    .image-container {
+      display: flex;
+      flex-wrap: wrap; /* Prevent wrapping to the next line */
+      
+      margin: -10px; /* Add negative margin to offset container padding */
+      justify-content: space-evenly;
+      
+      /* /* overflow: hidden; */
+      
+    }
+
+    .image-item {
+      flex: 0 0 auto; /* Don't grow, don't shrink, initial size */
+      margin: 10px; /* Add margin between images */
+      text-align: center;
+      
+    }
+
+    .image-item img {
+      width: 250px;
+      height: auto;
+      border-radius: 8px; /* Optional: Add rounded corners */
+    }
+
+    .caption {
+      margin-top: 5px;
+      font-size: 14px;
+    }
+
+
+    .hover-container {
+      position: relative;
+      overflow: hidden;
+      /* width: 300px;  */
+      display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+      
+    }
+
+    .overlay {
+      position: absolute;
+      width: 0;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      transition: width 0.3s ease-in-out;
+    }
+
+    .image-item:hover .overlay {
+      width: 50%; /* Adjust the width as needed */
+    }
+
+    .overlay.from-top-left {
+      top: 0;
+      left: 0;
+    }
+
+    .overlay.from-bottom-right {
+      bottom: 0;
+      right: 0;
+    }
+  </style>
+</head>
+<body>
+
+<div class="image-container">
+
+    <div class="hover-container">
+        <div class="image-item">
+            <img src="flowers delivery in chennai/black cardboard gift box 1.jpg" alt="Image 1">
+            <div class="overlay from-top-left"></div>
+            <div class="overlay from-bottom-right"></div>   
+        </div>
+        <div class="caption">Caption 1</div>
+    </div>
+
+  <div class="image-item">
+    <img src="flowers delivery in chennai/black cardboard gift box 1.jpg" alt="Image 1">
+    <div class="caption">Caption 1</div>
+  </div>
+  <div class="image-item">
+    <img src="flowers delivery in chennai/black cardboard gift box 1.jpg" alt="Image 1">
+    <div class="caption">Caption 1</div>
+  </div>
+  <div class="image-item">
+    <img src="flowers delivery in chennai/black cardboard gift box 1.jpg" alt="Image 1">
+    <div class="caption">Caption 1</div>
+  </div>
+  <div class="image-item">
+    <img src="flowers delivery in chennai/black cardboard gift box 1.jpg" alt="Image 1">
+    <div class="caption">Caption 1</div>
+  </div>
+  <div class="image-item">
+    <img src="flowers delivery in chennai/black cardboard gift box 1.jpg" alt="Image 1">
+    <div class="caption">Caption 1</div>
+  </div>
+  <div class="image-item">
+    <img src="flowers delivery in chennai/black cardboard gift box 1.jpg" alt="Image 1">
+    <div class="caption">Caption 1</div>
+  </div>
+  <div class="image-item">
+    <img src="flowers delivery in chennai/black cardboard gift box 1.jpg" alt="Image 1">
+    <div class="caption">Caption 1</div>
+  </div>
+ 
+  
+</div>
+
+</body>
+</html>

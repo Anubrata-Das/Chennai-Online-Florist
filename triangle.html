@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .tag-flx{
+    display: flex;
+    justify-content: space-around;
+}
+.tags {
+    position: relative;
+    padding: 6px;
+    background-color: green;
+    width: 16%;
+}
+
+.tag-box-con{
+    margin: 0 100px 50px 0;
+}
+
+.tri {
+    width: 0;
+    height: 0;
+    border-top: 24px solid transparent;
+    border-bottom: 30px solid transparent;
+    border-left: 30px solid green;
+    position: absolute;
+    z-index: 1;
+    border-style: solid;
+    top: 0px;
+    right: -30px;
+    border-right: transparent;
+}
+
+.tag-con {
+    top: 22px;
+    border-width: 32px 22px 0 0;
+    border-color: green transparent transparent transparent;
+    transform: rotate(180deg);
+    position: absolute;
+}
+
+.tags::after {
+    bottom: 22px;
+    border-width: 0 22px 32px 0;
+    border-color: transparent transparent green transparent;
+    transform: rotate(180deg);
+}
+
+.tags::after, .tag-con {
+    content: "";
+    position: absolute;
+    left: -22px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    display: block;
+}
+
+.tags p {
+    color: #fff;
+    font-weight: 600;
+    margin-bottom: 0;
+    text-align: center;
+    font-size: 28px;
+}
+
+
+.shining {
+  position: absolute;
+  top: -5px;
+  left: 0;
+  height: 50px;
+  width: 8px;
+  background: rgba(255, 255, 255, 0.8);
+  filter: blur(7px);
+  transform: translateX(-15px) rotate(20deg);
+  -webkit-animation: shine 2s infinite linear;
+          animation: shine 2s infinite linear;
+}
+
+@-webkit-keyframes shine {
+  100% {
+    transform: translateX(150px) rotate(20deg);
+  }
+}
+
+@keyframes shine {
+  100% {
+    transform: translateX(150px) rotate(20deg);
+  }
+}
+
+.shining-2 {
+  position: absolute;
+  top: -5px;
+  left: 87px;
+  height: 50px;
+  width: 8px;
+  background: rgba(255, 255, 255, 0.8);
+  filter: blur(7px);
+  transform: translateX(-15px) rotate(20deg);
+  -webkit-animation: shine 2s infinite linear;
+          animation: shine 2s infinite linear;
+}
+
+@-webkit-keyframes shine {
+  100% {
+    transform: translateX(200px) rotate(20deg);
+  }
+}
+
+@keyframes shine {
+  100% {
+    transform: translateX(200px) rotate(20deg);
+  }
+}
+    </style>
+</head>
+<body>
+    <section class="tag-box-con">
+        <div class="tag-flx">
+      <div class="tags drs__light_flash_effect">
+        <p>
+          IN TAMIL NADU
+        </p>
+        <div class="tri">
+          
+        </div>
+        <div class="tag-con">
+          
+        </div>
+        <div class="shining">
+          
+        </div>
+        <div class="shining-2">
+          
+        </div>
+      </div>
+      
+      <div class="tags">
+        <p>
+          IN CHENNAI
+        </p>
+        <div class="tri">
+          
+        </div>
+        <div class="tag-con">
+          
+        </div>
+        <div class="shining">
+          
+        </div>
+        <div class="shining-2">
+          
+        </div>
+      </div>
+      </div>
+      </section>
+</body>
+</html>

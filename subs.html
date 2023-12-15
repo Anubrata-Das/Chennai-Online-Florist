@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+     
+
+        #subscription-form {
+            background-color: #119205;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input {
+            width: 100%;
+            padding: 20px;
+            color: white;
+            box-sizing: border-box;
+            background-color: #119205;
+            border: 3px solid white;
+        }
+
+        button {
+            background-color: #119205;
+            color: #fff;
+            padding: 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            box-sizing: border-box;
+            border: 3px solid white;
+            width: 80%;
+            margin: 0 10rem;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+        .subs-container{
+            display: flex;
+            justify-content: center;
+        }
+        #subscribe-form{
+            display: flex;
+        }
+        .subs-image img{
+            width: 85rem;
+        }
+        .subs-form h2{
+            color: #fff;
+            font-size: 40px;
+        }
+        
+        .subs-form h1{
+            color: #fff;
+            font-size: 48px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="subs-container">
+        <div class="subs-image">
+            <img src="subs.png" alt="" srcset="">
+        </div>
+
+        <div class="subs-form" id="subscription-form">
+            <h2>Sign Up With your Email</h2>
+            <h1>Get A discount Coupon of</h1>
+            <form id="subscribe-form">
+        
+                
+                <input type="email" id="email" name="email" value="Enter Your email Address">
+        
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+
+    </div>
+</body>
+<script>
+    document.getElementById('subscribe-form').addEventListener('submit', function (event) {
+        event.preventDefault(); // Prevents the default form submission
+
+        // You can add your custom logic here, such as sending data to a server or displaying a thank you message.
+        alert('Subscription successful!'); 
+    });
+</script>
+</html>
